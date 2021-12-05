@@ -14,7 +14,7 @@ func SendFile(file *os.File, conn net.Conn) {
 		if e != nil || n == 0 {
 			break
 		}
-		conn.Write(buf)
+		conn.Write(buf[:n])
 	}
 }
 
@@ -31,7 +31,7 @@ func main() {
 			fmt.Println(e)
 			continue
 		}
-		defer conn.Close()
+
 		read_buf := make([]byte, 1024)
 		n, e := conn.Read(read_buf)
 		if e != nil {
