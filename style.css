@@ -1,14 +1,25 @@
-.hand_button {
-    --wsize: calc(30% * 1px);
-    width: var(--wsize);
-    height: var(--wsize);
-    border-radius: 50%;
+button.hand_button {
+    --button-size: calc(calc(100% - 12px) / 3);
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: 5%;
 }
 
-.buttons {
-    margin-left: 5%;
+div.buttons {
+    margin-top: 10%;
 }
 
-.button_img {
+div.COM {
+    width: 100%;
+    background-color: #3ee5b5;
+}
+
+img.COM_img {
+    --com-img-width: 80%;
+    width: var(--com-img-width);
+    margin-left: calc(50% - calc(var(--com-img-width) / 2));
+}
+
+img.button_img {
     transform: scale(1, 1);
 }
