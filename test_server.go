@@ -57,6 +57,7 @@ func main() {
 			conn.Write([]byte("HTTP/1.0 404 NOTFOUND\r\n\r\n"))
 		}
 
+		file.Close()
 		conn.Close()
 	}
 }
