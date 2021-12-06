@@ -26,7 +26,8 @@ img.COM_img {
 }
 
 img.button_img {
-    transform: scale(1, 1);
+    --btn-img-width: 80%;
+    width: var(--btn-img-width);
 }
 
 strong.red {
