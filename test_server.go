@@ -51,7 +51,7 @@ func main() {
 		exists := !os.IsNotExist(e)
 
 		if exists {
-			conn.Write([]byte("HTTP/1.0 200 OK\r\n\r\n"))
+			conn.Write([]byte("HTTP/1.0 200 OK\r\nConnection: close\r\n\r\n"))
 			SendFile(file, conn)
 		} else {
 			conn.Write([]byte("HTTP/1.0 404 NOTFOUND\r\n\r\n"))
